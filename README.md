@@ -72,19 +72,19 @@ A complete MERN stack application for gym management and member fitness tracking
 
 ## 📁 Project Structure
 
-
 GYM App/
-├── client/                 # React Frontend
+│
+├── client/                          # React Frontend
 │   ├── public/
-│   │   └── index.html
+│   │   └── index.html               # Base HTML
 │   ├── src/
-│   │   ├── App.js         # Main component (all features)
-│   │   ├── App.css        # Styling
-│   │   └── index.js       # Entry point
+│   │   ├── App.js                   # Main Component (UI + All Features)
+│   │   ├── App.css                  # Styling
+│   │   └── index.js                 # React Entry Point
 │   └── package.json
 │
-├── server/                 # Node.js Backend
-│   ├── models/            # Mongoose Schemas
+├── server/                          # Node.js Backend (Express)
+│   ├── models/                      # Mongoose Schemas (MongoDB)
 │   │   ├── User.js
 │   │   ├── Membership.js
 │   │   ├── Workout.js
@@ -94,10 +94,11 @@ GYM App/
 │   │   ├── DietPlan.js
 │   │   ├── Equipment.js
 │   │   └── Notification.js
-│   ├── server.js          # Express server & API routes
+│   ├── server.js                    # Express Server + Routes
 │   └── package.json
 │
-└── ER_diagram.txt         # Database schema
+└── ER_diagram.txt                   # Database Schema (ER Diagram)
+
 
 
 ## 🚀 Setup Instructions
@@ -317,6 +318,7 @@ Created for Gym Membership & Workout Tracking System Hackathon
  
 
  
+
 
 
 
