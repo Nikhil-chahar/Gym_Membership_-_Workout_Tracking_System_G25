@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - Gym Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>💪 Gym Management - Owner</h2>
+            <div class="nav-user">
+                <span id="ownerName">Owner</span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Gym Overview</h1>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-card-primary">
+                <h3>Total Members</h3>
+                <p id="totalUsers">0</p>
+            </div>
+            <div class="stat-card stat-card-primary">
+                <h3>Total Activities</h3>
+                <p id="totalActivities">0</p>
+            </div>
+            <div class="stat-card stat-card-primary">
+                <h3>Activities Today</h3>
+                <p id="todayActivities">0</p>
+            </div>
+            <div class="stat-card stat-card-primary">
+                <h3>Activities This Week</h3>
+                <p id="weekActivities">0</p>
+            </div>
+        </div>
+
+        <div class="tabs-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="activities">All Activities</button>
+                <button class="tab-btn" data-tab="users">Members</button>
+            </div>
+
+            <!-- Activities Tab -->
+            <div id="activitiesTab" class="tab-content active">
+                <div class="section-header">
+                    <h2>All Gym Activities</h2>
+                    <input type="text" id="activitySearch" placeholder="Search activities..." class="search-input">
+                </div>
+                <div id="allActivitiesList" class="activities-list">
+                    <p class="empty-state">No activities recorded yet.</p>
+                </div>
+            </div>
+
+            <!-- Users Tab -->
+            <div id="usersTab" class="tab-content">
+                <div class="section-header">
+                    <h2>Gym Members</h2>
+                    <input type="text" id="userSearch" placeholder="Search members..." class="search-input">
+                </div>
+                <div id="usersList" class="users-list">
+                    <p class="empty-state">No members registered yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="owner-dashboard.js"></script>
+</body>
+</html>
+

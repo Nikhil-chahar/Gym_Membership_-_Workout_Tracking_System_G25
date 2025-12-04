@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Gym Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>💪 Gym Management</h2>
+            <div class="nav-user">
+                <span id="userName">User</span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>My Activities</h1>
+            <button class="btn btn-primary" onclick="showAddActivityModal()">+ Add Activity</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Activities</h3>
+                <p id="totalActivities">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>This Week</h3>
+                <p id="weekActivities">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Today</h3>
+                <p id="todayActivities">0</p>
+            </div>
+        </div>
+
+        <div class="activities-section">
+            <h2>Activity History</h2>
+            <div id="activitiesList" class="activities-list">
+                <p class="empty-state">No activities yet. Add your first activity!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Activity Modal -->
+    <div id="addActivityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddActivityModal()">&times;</span>
+            <h2>Add New Activity</h2>
+            <form id="addActivityForm">
+                <div class="form-group">
+                    <label for="activityType">Activity Type</label>
+                    <select id="activityType" required>
+                        <option value="Workout">Workout</option>
+                        <option value="Cardio">Cardio</option>
+                        <option value="Strength Training">Strength Training</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="3" placeholder="Describe your activity..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration (minutes)</label>
+                    <input type="number" id="duration" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment">Equipment Used</label>
+                    <input type="text" id="equipment" placeholder="e.g., Treadmill, Dumbbells">
+                </div>
+                <div class="form-group">
+                    <label for="activityDate">Date</label>
+                    <input type="datetime-local" id="activityDate" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Activity</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="user-dashboard.js"></script>
+</body>
+</html>
+
